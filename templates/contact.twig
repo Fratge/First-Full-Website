@@ -1,0 +1,81 @@
+{% extends "base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/contact.css">
+{% endblock style %}
+
+{% block main %}
+
+<div class="wrapper">
+    <h1>Contactez-nous !</h1>
+
+    <form action="https://tp2.iha.unistra.fr/~grosss/reception.php" method=POST>
+
+        <fieldset>
+            <legend> Vous êtes : </legend>
+            <input name="rider" id="occasionnel" type="radio" value="occasionnel">
+            <label for="occasionnel">Un rider occasionnel </label>
+            <input name="rider" id="accros" type="radio" value="accros">
+            <label for="accros"> Un rider accros !</label>
+            <p><i>1 Seul choix possible</i> </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Vos informations :</legend>
+            <p class="align">
+                <label for="prenom"> Votre prénom :</label>
+                <input name="prenom" id="prenom" type="text" size="30" maxlength="100">
+            </p>
+            <p class="align">
+                <label for="nom"> Votre nom :</label>
+                <input name="nom" id="nom" type="texte" size="30" maxlength="100">
+            </p>
+            <p class="align">
+                <label for="mail"> Votre adresse mail :</label>
+                <input name="mail" id="mail" type="email" size="30" maxlength="100">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Votre profil :</legend>
+            <p class="align">
+                <label for="age">Votre age :</label>
+                <input name="age" id="age" type="number" value="13" min="13" max="100"> </p>
+            <p class="align"><label for="statut">Votre Statut :</label>
+                <select name="statut" id="statut" size="1">
+                    <option selected value="etudiant">Etudiant</option>
+                    <option value="actif"> Actif</option>
+                    <option value="retraite"> Retraité</option>
+                    <option value="autre"> Autre...</option>
+                </select>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend> Vos coordonnées :</legend>
+            <p>
+                <label for="ville"> Votre ville :</label>
+                <input name="ville" id="ville" type="text" size="30" maxlength="100">
+            </p>
+        </fieldset>
+
+
+        <fieldset>
+            <legend> Commentaires : </legend>
+            <p>
+                <textarea name="Comments" cols="50" rows="10"
+                    placeholder="Vous pouvez insérer vos commentaires ici..."></textarea>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend> Pour valider ou corriger vos saisies :</legend>
+            <p class="centre">
+                <input name="init" type="reset" value="Annuler">
+                <input name="soumettre" type="submit" value="Envoyer">
+            </p>
+        </fieldset>
+    </form>
+</div>
+
+{% endblock %}

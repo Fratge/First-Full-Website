@@ -1,0 +1,139 @@
+.nav-container {
+    /* Conteneur de la nav, avec l'image de fond */
+    background-image: url(../images/accueil_nav_container.jpg);
+}
+
+/* -------------------------------------------- Body | Main -------------------------------------------- */
+
+body {
+    /* Couleur du Body et largeur de notre site */
+    background-color: #ffec7e;
+    width: 960px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+main {
+    /* Couleur du main */
+    background-color: rgb(109, 154, 233);
+}
+
+/* -------------------------------------------- Tout les titres des articles -------------------------------------------- */
+
+article h2 {
+    /* Mise en forme des titres des articles, et les centrer */
+    font-family: "Cormorant Garamond", serif;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 29px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    border: 2px solid black;
+    border-left-style: none;
+    border-right-style: none;
+}
+
+/* -------------------------------------------- Section : createur --------------------------------------------*/
+
+section.createur p {
+    /* Texte de la section paragraphe */
+    text-align: justify;
+    font-weight: 800;
+    margin: 10px;
+}
+
+i {
+    /* Pour tout les valeurs entre les balises i : */
+    color: black;
+    text-decoration: underline;
+}
+
+/* -------------------------------------------- Aside -------------------------------------------- */
+
+aside {
+    /* Mise en forme du aside, élements en direction colonne (vers le bas)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    float: left;
+    width: 175px;
+    height: 230px;
+    background-color: #6b6b6b;
+    border: 2px solid rgb(43, 42, 42);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+aside ul li {
+    /* Mise en forme des li */
+    list-style-type: none;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+}
+
+aside img {
+    /* Taille de l'image et espacement du haut */
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+/* -------------------------------------------- Section : accessibilité -------------------------------------------- */
+
+.accessibilite-velo h3 {
+    /* Mise en forme des h3 dans la section, Position relative, pour pouvoir mettre bottom 0 pour le ::before */
+    font-size: 29px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+    position: relative;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.accessibilite-velo h3::before {
+    /* Mettre le trait vert en-dessous des h3 grâce à bottom 0 */
+    content: "";
+    position: absolute;
+    background-color: rgb(80, 253, 172);
+    border-radius: 35px;
+    width: 120px;
+    height: 5px;
+    bottom: 0;
+}
+
+.accessibilite-velo h4 {
+    /* Mise en forme des h4 de la section */
+    font-size: 27px;
+    margin: 70px 0px 30px;
+}
+
+.texte-conteneur {
+    /* Mise en forme conteneur des textes de la section */
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(186, 221, 231);
+    display: flex;
+    text-align: center;
+}
+
+.texte-conteneur p {
+    /* Mise en forme du texte du conteneur */
+    font-family: "Proza Libre", sans-serif;
+    font-size: 20px;
+}
+
+.texte-conteneur img {
+    /* Taille de l'image en fonction de son conteneur */
+    width: 475px;
+    height: 100%;
+}
+
+.quel-budjet>h3 {
+    /* Article quel budjet -> pour mettre le titre à droite */
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10px;
+}

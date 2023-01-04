@@ -1,0 +1,122 @@
+{% extends "base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/equipements.css">
+{% endblock style %}
+
+{% block main %}
+
+<aside>
+    <h1>Actualités</h1>
+    <img src="{{textes.image_aside}}" alt="">
+    <p>
+        <strong>{{textes.titre_aside}}</strong>
+    </p>
+    <p>
+        <i>
+            {{textes.intro_aside}}
+        </i>
+    </p>
+    <h4>Un plus pour la sécurité !</h4>
+    <p>
+        {{textes.texte_aside}}
+    </p>
+</aside>
+
+<section>
+
+    <article class="introduction">
+        <p>
+            {{textes.intro_article}}
+        </p>
+    </article>
+
+    <article class="velo-obligatoire">
+        <h3>D’abord, est-ce que {{textes.titre_article}} sont obligatoire ?</h3>
+        <p>
+            {{textes.texte1_article}}
+        </p>
+        <p>
+            {{textes.texte1_2article}}
+        </p>
+    </article>
+
+    <article class="blessures-casque">
+        <h3>Quelles sont les blessures que {{textes.titre_article}} permettent d'éviter ?</h3>
+        <p>
+            {{textes.texte2_article}}
+        </p>
+        <p>
+            {{textes.texte2_2article}}
+        </p>
+
+    </article>
+
+    <article class="fonctionnement-casque">
+        <h3>Comment fonctionne {{textes.titre_article}} ?</h3>
+        <p>3 fonctions sont à distinguer :</p>
+        <ul>
+            <li>{{textes.liste1_article}}</li>
+            <li>{{textes.liste2_article}}</li>
+            <li>{{textes.liste3_article}}</li>
+        </ul>
+    </article>
+
+    <article class="nos-avis">
+        <h2> Nos avis (subjectifs) :</h2>
+        <table role="presentation">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Bas de Gamme</th>
+                    <th>Millieu de Gamme</th>
+                    <th>Haut de Gamme</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Marque</td>
+                    {% for elements in nom_image %}
+                    <td>
+                        <img src="{{elements.marque_img}}" alt="">
+                        <p>{{elements.marque_nom}}</p>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% for lignes in tableau_principale %}
+                <tr>
+                    {% for colonnes in lignes %}
+                    <td>{{colonnes}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>Plus d'informations</td>
+                    {% for element in liens %}
+                    <td><a class="boutton" href="{{element}}" target="_blank">En savoir plus</a></td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="nos-recommandations">
+        <h2>Nos recommandations</h2>
+        <p>
+            Nous vous recommandons d'acheter {{textes.titre_article}} de marques comme par exemple:
+            <strong>{{textes.marque1}}</strong>,<strong>{{textes.marque2}}</strong>, <strong>{{textes.marque3}}</strong>
+            etc...
+            {{textes.recommandation1}}
+        </p>
+        <p>
+            {{textes.recommandation2}}
+        </p>
+
+        <p>
+            {{textes.recommandation3}}
+        </p>
+    </article>
+
+</section>
+
+{% endblock main %}

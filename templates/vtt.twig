@@ -1,0 +1,71 @@
+{% extends "base.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/vtt.css">
+{% endblock style %}
+
+{% block main %}
+<section>
+
+    <article>
+        <h2>{{titres_articles.nom1}}</h2>
+        <p>
+            {{textes.numeros1}}
+        </p>
+    </article>
+
+    <article>
+        <h2>{{titres_articles.nom2}}</h2>
+        <table role="presentation">
+            <thead>
+                <tr>
+                    <th>Avantages</th>
+                    <th>Inconvénients</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contenutableaux in tableaux %}
+                <tr>
+                    <td>{{contenutableaux.avantage}}</td>
+                    <td>{{contenutableaux.inconvenient}}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="2">{{conclusion}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article>
+        <h2>{{titres_articles.nom3}}</h2>
+        <p>
+            {{textes.numeros2}}
+        </p>
+    </article>
+
+    <article>
+        <h2>{{titres_articles.nom4}}</h2>
+        <div class="item-conteneur">
+            {% for choix in noschoix %}
+            <div class="item">
+                <img src="{{choix.image}}" alt="{{choix.alt}}">
+                <h3>{{choix.budget}}</h3>
+                <p>
+                    {{choix.texte}}
+                </p>
+                <a target="_blank" href="{{choix.lien}}" target="_blank">Voir le produit</a>
+            </div>
+            {% endfor %}
+        </div>
+    </article>
+
+</section>
+<aside>
+    <h1>Nos magasines :</h1>
+    {% for element in aside %}
+    <img src="{{element.image}}" alt="{{element.alt}}">
+    {% endfor %}
+</aside>
+
+{% endblock main %}

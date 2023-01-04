@@ -1,0 +1,122 @@
+{% extends "base_en.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/equipements.css">
+{% endblock style %}
+
+{% block main %}
+
+<aside>
+    <h1>News</h1>
+    <img src="{{textes.image_aside}}" alt="">
+    <p>
+        <strong>{{textes.titre_aside}}</strong>
+    </p>
+    <p>
+        <i>
+            {{textes.intro_aside}}
+        </i>
+    </p>
+    <h4>A plus for safety!</h4>
+    <p>
+        {{textes.texte_aside}}
+    </p>
+</aside>
+
+<section>
+
+    <article class="introduction">
+        <p>
+            {{textes.intro_article}}
+        </p>
+    </article>
+
+    <article class="velo-obligatoire">
+        <h3>First of all, does {{textes.titre_article}} are mandatory ?</h3>
+        <p>
+            {{textes.texte1_article}}
+        </p>
+        <p>
+            {{textes.texte1_2article}}
+        </p>
+    </article>
+
+    <article class="blessures-casque">
+        <h3>What are the injuries that {{textes.titre_article}} allow to avoid ?</h3>
+        <p>
+            {{textes.texte2_article}}
+        </p>
+        <p>
+            {{textes.texte2_2article}}
+        </p>
+
+    </article>
+
+    <article class="fonctionnement-casque">
+        <h3>How does {{textes.titre_article}} works?</h3>
+        <p>3 functions are to be distinguished :</p>
+        <ul>
+            <li>{{textes.liste1_article}}</li>
+            <li>{{textes.liste2_article}}</li>
+            <li>{{textes.liste3_article}}</li>
+        </ul>
+    </article>
+
+    <article class="nos-avis">
+        <h2> Our (subjective) opinions :</h2>
+        <table role="presentation">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Bottom of the range</th>
+                    <th>Mid-range</th>
+                    <th>Top of the range</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Brand</td>
+                    {% for elements in nom_image %}
+                    <td>
+                        <img src="{{elements.marque_img}}" alt="">
+                        <p>{{elements.marque_nom}}</p>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% for lignes in tableau_principale %}
+                <tr>
+                    {% for colonnes in lignes %}
+                    <td>{{colonnes}}</td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td>More informations</td>
+                    {% for element in liens %}
+                    <td><a class="boutton" href="{{element}}" target="_blank">Learn more</a></td>
+                    {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </article>
+
+    <article class="nos-recommandations">
+        <h2>Our recommendations</h2>
+        <p>
+            We recommend that you purchase {{textes.titre_article}} of brands such as :
+            <strong>{{textes.marque1}}</strong>,<strong>{{textes.marque2}}</strong>, <strong>{{textes.marque3}}</strong>
+            and more...
+            {{textes.recommandation1}}
+        </p>
+        <p>
+            {{textes.recommandation2}}
+        </p>
+
+        <p>
+            {{textes.recommandation3}}
+        </p>
+    </article>
+
+</section>
+
+{% endblock main %}

@@ -1,0 +1,62 @@
+{% extends "base_en.twig" %}
+
+{% block style %}
+<link rel="stylesheet" href="css/electriques.css">
+{% endblock style %}
+
+{% block main %}
+
+<aside>
+    <h1>Product purchase</h1>
+    <div>
+        <img src="{{textes.image_aside}}" alt="image du produit vélo">
+        <p class="aside-texte">
+            {{textes.texte_aside}}
+        </p>
+        <a class="boutton" href="{{textes.lien_aside}}" target="_blank">Buy it now</a>
+    </div>
+    <div class="aside-list">
+        <ul>
+            <li>Features :</li>
+            <li>Size : {{textes.taille}}</li>
+            <li>Wheels : {{textes.roues}}</li>
+            <li>Colors : {{textes.couleurs}}</li>
+            <li>Battery : {{textes.batterie}}</li>
+            <li>Price : {{textes.prix}}</li>
+        </ul>
+    </div>
+</aside>
+
+<section>
+    <article class="informations-vélos">
+        <h2>{{textes.titre_article1}}</h2>
+        <div>
+            <img class="article-img" src="{{textes.image_article1}}" alt="">
+            <p>
+                {{textes.texte1_article1}}
+            </p>
+            <p>
+                {{textes.texte2_article1}}
+            </p>
+            <p>
+                {{textes.texte3_article1}}
+            </p>
+            <a class="boutton" href="{{textes.ensavoirplus_article1}}" target="blank">Read more</a>
+        </div>
+    </article>
+    <article class="prix-vélos">
+        <h2>{{textes.titre_article2}}</h2>
+        <div>
+            <img class="article-img" src="{{textes.image_article2}}" alt="">
+            <p>
+                {{textes.texte1_article2}}
+            </p>
+            <p>
+                {{textes.texte2_article2}}
+            </p>
+            <a class="boutton" href="{{textes.ensavoirplus_article2}}" target="blank">Read more</a>
+        </div>
+    </article>
+</section>
+
+{% endblock main %}

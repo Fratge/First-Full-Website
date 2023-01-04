@@ -1,0 +1,185 @@
+.nav-container {
+    /* Conteneur de la nav, avec l'image de fond */
+    background-image: url(../images/casques_nav_container.jpg);
+}
+
+
+/* -------------------------------------------- Body | Main -------------------------------------------- */
+
+body {
+    /* Couleur du Body et largeur de notre site */
+    background-color: #fff899;
+    width: 960px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+main {
+    /* Couleur du main */
+    background-color: #83b5ff;
+}
+
+/* -------------------------------------------- Pour tout les articles --------------------------------------------*/
+
+h3 {
+    /* Mise en forme des h3 des articles */
+    margin: 15px 10px 5px 10px;
+    font-weight: 900;
+    font-size: 24px;
+    font-family: "Proza Libre", sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    /* Mise en forme des h2 des articles */
+    margin-top: 30px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 33px;
+}
+
+article p {
+    /* Mise en forme des textes des articles */
+    color: black;
+    font-family: "Proza Libre", sans-serif;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+/* -------------------------------------------- Article : introduction -------------------------------------------- */
+
+.introduction p {
+    /* Mise en forme de l'introduction */
+    font-size: 19px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-align: justify;
+}
+
+.introduction::first-letter {
+    /* Pour la première lettre de l'introduction couleur -> rouge */
+    color: red;
+}
+
+/* -------------------------------------------- Aside --------------------------------------------*/
+
+aside {
+    /* Taille du aside */
+    text-align: center;
+    float: right;
+    width: 300px;
+    margin: 10px 10px 10px;
+    background-color: rgb(247, 101, 101);
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+aside h1 {
+    /* Titre du aside */
+    color: rgb(255, 231, 16);
+    font-family: "Proza Libre", sans-serif;
+    letter-spacing: 2px;
+}
+
+aside h4,
+strong {
+    /* Pour les h4 et valeurs strong dans le aside : */
+    margin: 5px;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+aside p,
+i {
+    /* Mise en forme du texte et valeurs i dans le aside : */
+    font-family: "Cormorant Garamond";
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+aside img {
+    /* Taille de l'image */
+    width: 200px;
+}
+
+/* -------------------------------------------- Article : fonctionnement-casque --------------------------------------------*/
+
+.fonctionnement-casque p {
+    /* Taille du texte */
+    font-size: 20px;
+}
+
+.fonctionnement-casque ul {
+    /* Marge de gauche */
+    margin-left: 60px;
+}
+
+.fonctionnement-casque li {
+    /* Mise en forme des éléments de la liste */
+    margin: 10px 0px 10px;
+    font-size: 16px;
+    font-family: "Proza Libre", sans-serif;
+    color: black;
+}
+
+/* -------------------------------------------- Article : nos-avis --------------------------------------------*/
+
+table {
+    /* Fusion des bords du tableau, border-style solid -> trait */
+    text-align: center;
+    background-color: #b6c8dd;
+    border-collapse: collapse;
+    border-width: 5px;
+    border-style: solid;
+    color: #000000;
+    margin-bottom: 10px;
+    margin: auto;
+}
+
+table img {
+    /* Taille des images */
+    width: 150px;
+    height: 150px;
+}
+
+table .boutton {
+    /* Mise en forme du bouton du tableau */
+    width: 140px;
+    background-color: rgb(247, 102, 102);
+    color: black;
+}
+
+td,
+th {
+    /* Mise en forme de tout les td et th */
+    font-family: "Proza Libre", sans-serif;
+    border-width: 5px;
+    border-color: #464e4c;
+    border-style: solid;
+    padding: 6px;
+    font-size: 20px;
+    width: 220px;
+}
+
+th,
+tr:nth-child(even) {
+    /* Permet de cibler les lignes paires d'un tableau */
+    background-color: #ccc;
+}
+
+/* -------------------------------------------- Article : nos-recommandationss --------------------------------------------*/
+
+.nos-recommandations p {
+    /* Taille et marge interne des texte (pour avoir un espace) */
+    padding: 15px;
+    font-size: 19px;
+}
+
+.nos-recommandations strong {
+    /* Pour les mots en strong : */
+    color: rgb(0, 60, 255);
+    font-weight: 900;
+    font-size: 19px;
+}

@@ -1,0 +1,174 @@
+.nav-container {
+    /* Conteneur de la nav, avec l'image de fond */
+    background-image: url(../images/fatbike_image_fond.jpg);
+}
+
+/* -------------------------------------------- Body | Main -------------------------------------------- */
+
+body {
+    /* Couleur du Body et largeur de notre site */
+    background-color: #fccdf5;
+    width: 960px;
+    margin: auto;
+    border: 3px solid black;
+}
+
+main {
+    /* Mise en forme du main */
+    display: flex;
+    background-color: #a6a7ff;
+}
+
+section,
+article {
+    /* Taille des articles et section */
+    width: 100%;
+}
+
+/* -------------------------------------------- Pour tout les articles -------------------------------------------- */
+
+article p::first-letter {
+    /* Prmière lettre des articles en couleur rouge */
+    color: red;
+    font-size: 32px;
+    font-weight: 900;
+}
+
+article h2 {
+    /* Mise en forme des h2 des articles, Position relative, pour pouvoir mettre bottom 0 pour le ::before */
+    font-size: 29px;
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+    position: relative;
+    color: white;
+    margin: 5px;
+}
+
+article h2::before {
+    /* Mise en place du trait vert en-dessous h2  grâce a bottom 0 */
+    content: "";
+    position: absolute;
+    background-color: rgb(80, 253, 172);
+    border-radius: 35px;
+    width: 90%;
+    height: 3px;
+    bottom: 0;
+}
+
+article p {
+    /* Mise en place du  texte pour tout les articles */
+    font-family: "Proza Libre", sans-serif;
+    font-weight: 500;
+    margin: 10px;
+    color: black;
+    font-size: 22px;
+}
+
+/* -------------------------------------------- Aside -------------------------------------------- */
+
+aside {
+    /* Mise en forme du aside */
+    margin: 20px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: grey;
+    text-align: center;
+    height: 970px;
+}
+
+aside h1 {
+    /* Mise en forme des h1 du aside */
+    font-family: "Abril Fatface", cursive;
+    font-weight: 500;
+    width: 100%;
+    background-color: rgb(99, 106, 112);
+    margin-bottom: 5px;
+}
+
+aside img {
+    /* Taille de l'image et la marge du bas */
+    width: 200px;
+    height: 220px;
+    margin-bottom: 5px;
+}
+
+/* --------------------------------------------Tableau -------------------------------------------- */
+
+table {
+    /* Mise en forme du tableau, collapse => fusion des bordures du tableau */
+    margin-left: 12px;
+    margin-top: 18px;
+    background-color: #fff9a6;
+    border-collapse: collapse;
+    border-width: 5px;
+    border-style: solid;
+    color: #000000;
+}
+
+th {
+    /* Couleur de fond des th */
+    background-color: rgb(204, 201, 201);
+}
+
+td,
+th {
+    /* Mise en forme du style des td et th du tableaux, style solid -> trait */
+    font-family: "Proza Libre", sans-serif;
+    border-width: 5px;
+    border-color: #585858;
+    border-style: solid;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/* -------------------------------------------- Article : nos-choix -------------------------------------------- */
+
+.item-conteneur {
+    /* Mise en place des différentes "box" */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.item {
+    /* Mise en forme de chaque "box" */
+    width: 210px;
+    text-align: center;
+    border: 5px solid #265cc0;
+    margin-left: 10px;
+    border-radius: 15px;
+    height: 410px;
+}
+
+.item-conteneur img {
+    /* Taille des images et marge du haut */
+    margin-top: 15px;
+    width: 180px;
+    height: 160px;
+}
+
+.item-conteneur h3 {
+    /* Taille de h3 */
+    font-family: "Abril Fatface", cursive;
+    font-weight: 100;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+}
+
+.item a {
+    /* Mise en forme des a */
+    font-size: 16px;
+    font-family: "Proza Libre", sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    margin: 20px;
+    padding: 8px;
+}
+
+.item a:hover {
+    /* Au survol de la souris, changement de couleur de fond */
+    background-color: rgb(148, 98, 240);
+}

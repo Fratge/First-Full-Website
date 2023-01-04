@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link rel="stylesheet" href="css/base.css">
+    {% block style %}
+
+    {% endblock style %}
+    <title>{{ titre_page }} | VelHype</title>
+</head>
+
+<body>
+    <header role="banner">
+        <div class="header-title">
+            <img src="./images/accueil_header_vtt.png" alt="">
+            <h1>VELHYPE</h1>
+            <img src="./images/accueil_header_vtt.png" alt="">
+        </div>
+        <div>
+            <h4>Passion above all</h4>
+        </div>
+        <div class="nav-container">
+            <nav role="navigation">
+                <a href="index_en.php" class="nav-logo">VELHYPE</a>
+                <ul>
+                    <li><a href="index_en.php">Home</a></li>
+                    <li class="menus"><a href="#">MTB</a>
+                        <ul class="sub-menus">
+                            <li><a href="01_fatbike_en.php">Fatbike</a></li>
+                            <li><a href="01_descente_en.php">DownHill</a></li>
+                            <li><a href="01_enduro_en.php">Enduro</a></li>
+                            <li><a href="01_freeride_en.php">Freeride</a></li>
+                            <li><a href="01_xc_en.php">XC</a></li>
+                        </ul>
+                    </li>
+                    <li class="menus"><a href="#">Electric bikes</a>
+                        <ul class="sub-menus">
+                            <li><a href="02_pliants_en.php">Folding Bikes</a></li>
+                            <li><a href="02_cargos_en.php">Cargos</a></li>
+                            <li><a href="02_vtc_en.php">APB</a></li>
+                            <li><a href="02_vttae_en.php">MBEA</a></li>
+                            <li><a href="02_vaer_en.php">FEB</a></li>
+                        </ul>
+                    </li>
+                    <li class="menus"><a href="#">Equipement</a>
+                        <ul class="sub-menus">
+                            <li><a href="03_casque_en.php">Helmet</a></li>
+                            <li><a href="03_gants_en.php">Gloves</a></li>
+                            <li><a href="03_dorsale_en.php">Dorsal</a></li>
+                            <li><a href="03_lunettes_en.php">Glasses</a></li>
+                            <li><a href="03_lumieres_en.php">Lights</a></li>
+                        </ul>
+                    </li>
+                    <li class="boutton-container">
+                        <a class="boutton" href="contact_en.php">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div>
+                <h1>{{titre_nav}}</h1>
+            </div>
+            <div class="languages">
+                <a href="" lang="en"><img src="./images/en.svg" alt="Turn the language in English"></a>
+                <a href="{{langage_francais}}" lang="fr"><img src="./images/fr.svg" alt="Mettre le language en Français"></a>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+        {% block main %}
+
+        {% endblock %}
+    </main>
+
+    <footer role="contentinfo">
+        <div class="footer-conteneur">
+            <div class="colonne">
+                <h1>Home Page</h1>
+                <ul>
+                    <li>
+                        <a href="index_en.php">Home</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="colonne">
+                <h1>MTB</h1>
+                <ul>
+                    <li><a href="01_fatbike_en.php">Fatbike</a></li>
+                    <li><a href="01_descente_en.php">DownHill</a></li>
+                    <li><a href="01_enduro_en.php">Enduro</a></li>
+                    <li><a href="01_freeride_en.php">Freeride</a></li>
+                    <li><a href="01_xc_en.php">XC</a></li>
+                </ul>
+            </div>
+            <div class="colonne">
+                <h1>Electric bikes</h1>
+                <ul>
+                    <li><a href="02_pliants_en.php">Folding Bikes</a></li>
+                    <li><a href="02_cargos_en.php">Cargos</a></li>
+                    <li><a href="02_vtc_en.php">APB</a></li>
+                    <li><a href="02_vttae_en.php">MBEA</a></li>
+                    <li><a href="02_vaer_en.php">FEB</a></li>
+                </ul>
+            </div>
+            <div class="colonne">
+                <h1>Equipement</h1>
+                <ul>
+                    <li><a href="03_casque_en.php">Helmet</a></li>
+                    <li><a href="03_gants_en.php">Gloves</a></li>
+                    <li><a href="03_dorsale_en.php">Dorsal</a></li>
+                    <li><a href="03_lunettes_en.php">Glasses</a></li>
+                    <li><a href="03_lumieres_en.php">Lights</a></li>
+                </ul>
+            </div>
+            <div class="colonne">
+                <h1>Support</h1>
+                <ul>
+                    <li><a class="boutton" href="contact_en.php">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>© Copyright | Sébastien Gross | All rights reserved</p>
+    </footer>
+</body>
+
+</html>
